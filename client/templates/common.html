@@ -1,0 +1,31 @@
+<template name="names">
+  <p>My name is {{name}}</p>
+</template>
+
+<template name="people">
+  {{#each people}}
+  {{> names}}
+  {{/each}}
+</template>
+
+<template name="profilePage">
+  <p>Profile page for {{username}}</p>
+</Template>
+
+
+<template name="example">
+  <button class="my-button">My button</button>
+  <form>
+    <input type="text" name="myInput" />
+    <input type="submit" value="Submit Form" />
+  </form>
+</template>
+
+<!-- replace the existing task template with this code -->
+<template name="task">
+  <li class="{{#if checked}}checked{{/if}}">
+    <button class="delete">&times;</button>
+    <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
+    <span class="text">{{text}}</span>
+  </li>
+</template>

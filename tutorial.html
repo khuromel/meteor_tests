@@ -1,0 +1,29 @@
+<head>
+  <title>tutorial</title>
+</head>
+
+<body>
+  <h1>Goal: CRUD TASKS</h1>
+
+  <h1>User Profile:</h1>
+  {{> loginButtons}}
+
+  <h1>Todo List ({{incompleteCount}})</h1>
+  <!-- add the checkbox to <body> right below the h1 -->
+  <label class="hide-completed">
+    <input type="checkbox" checked="{{hideCompleted}}" />
+    Hide Completed Tasks
+  </label>
+  <br><br>
+  <form class="new-task">
+    <label for="add_new" >Add new Task:</label>
+    <input id="add_new" type="text" name="text" placeholder="Type to add new tasks" />
+  </form>
+
+  <ul>
+    {{#each tasks}}
+    {{> task}}
+    {{/each}}
+  </ul>
+
+</body>
